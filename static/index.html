@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Parser (OCR)</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Resume Parser</h1>
+      <p class="subtitle">Upload a PDF, DOCX, or Image. OCR-enabled extraction with structured JSON output.</p>
+    </header>
+
+    <section class="card">
+      <form id="uploadForm">
+        <label class="file-input">
+          <input type="file" id="file" accept=".pdf,.docx,.png,.jpg,.jpeg,.tiff" required />
+          <span>Select resume file</span>
+        </label>
+        <button type="submit" class="primary">Parse Resume</button>
+      </form>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="card">
+      <h2>Parsed JSON</h2>
+      <pre id="output" class="output">{ /* results appear here */ }</pre>
+    </section>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
